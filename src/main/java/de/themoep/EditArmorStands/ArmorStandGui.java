@@ -57,10 +57,15 @@ public class ArmorStandGui implements Listener {
     private final static Set<Material> HELMETS = new HashSet<>(Arrays.asList(
             Material.LEATHER_HELMET,
             Material.IRON_HELMET,
-            Material.GOLD_HELMET,
+            Material.GOLDEN_HELMET,
             Material.DIAMOND_HELMET,
             Material.CHAINMAIL_HELMET,
-            Material.SKULL_ITEM,
+            Material.PLAYER_HEAD,
+            Material.ZOMBIE_HEAD,
+            Material.CREEPER_HEAD,
+            Material.DRAGON_HEAD,
+            Material.SKELETON_SKULL,
+            Material.WITHER_SKELETON_SKULL,
             Material.PUMPKIN
     ));
 
@@ -70,7 +75,7 @@ public class ArmorStandGui implements Listener {
     private final static Set<Material> CHESTPLATES = new HashSet<>(Arrays.asList(
             Material.LEATHER_CHESTPLATE,
             Material.IRON_CHESTPLATE,
-            Material.GOLD_CHESTPLATE,
+            Material.GOLDEN_CHESTPLATE,
             Material.DIAMOND_CHESTPLATE,
             Material.CHAINMAIL_CHESTPLATE
     ));
@@ -81,7 +86,7 @@ public class ArmorStandGui implements Listener {
     private final static Set<Material> PANTS = new HashSet<>(Arrays.asList(
             Material.LEATHER_LEGGINGS,
             Material.IRON_LEGGINGS,
-            Material.GOLD_LEGGINGS,
+            Material.GOLDEN_LEGGINGS,
             Material.DIAMOND_LEGGINGS,
             Material.CHAINMAIL_LEGGINGS
     ));
@@ -92,7 +97,7 @@ public class ArmorStandGui implements Listener {
     private final static Set<Material> BOOTS = new HashSet<>(Arrays.asList(
             Material.LEATHER_BOOTS,
             Material.IRON_BOOTS,
-            Material.GOLD_BOOTS,
+            Material.GOLDEN_BOOTS,
             Material.DIAMOND_BOOTS,
             Material.CHAINMAIL_BOOTS
     ));
@@ -126,7 +131,7 @@ public class ArmorStandGui implements Listener {
             CHESTPLATES.add(Material.ELYTRA);
         }
 
-        filler = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 15);
+        filler = new ItemStack(Material.BLACK_STAINED_GLASS_PANE, 1);
         ItemMeta fim = filler.getItemMeta();
         fim.setDisplayName(ChatColor.BLACK + "X");
         filler.setItemMeta(fim);
@@ -350,7 +355,7 @@ public class ArmorStandGui implements Listener {
                 return armorStand.getChestplate();
             case 14:
                 if (plugin.getServerVersion() < 10900) {
-                    ItemStack leftArm = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 14);
+                    ItemStack leftArm = new ItemStack(Material.RED_STAINED_GLASS_PANE, 1);
                     ItemMeta laim = leftArm.getItemMeta();
                     laim.setDisplayName(ChatColor.RED + "The offhand item cannot be set in 1.8!");
                     leftArm.setItemMeta(laim);

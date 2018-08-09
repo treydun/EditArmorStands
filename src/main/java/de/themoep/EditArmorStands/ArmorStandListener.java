@@ -65,8 +65,8 @@ public class ArmorStandListener implements Listener {
                 return;
             }
 
-            if (event.getPlayer().getItemInHand().getType() == Material.NAME_TAG) {
-                ItemStack hi = event.getPlayer().getItemInHand();
+            if (event.getPlayer().getInventory().getItemInMainHand().getType() == Material.NAME_TAG) {
+                ItemStack hi = event.getPlayer().getInventory().getItemInMainHand();
                 if (hi.hasItemMeta() && hi.getItemMeta().hasDisplayName()) {
                     if (event.getPlayer().hasPermission("editarmorstands.nametag.name")) {
                         event.setCancelled(true);
@@ -82,7 +82,7 @@ public class ArmorStandListener implements Listener {
                             if (hi.getAmount() > 1) {
                                 hi.setAmount(hi.getAmount() - 1);
                             } else {
-                                event.getPlayer().setItemInHand(new ItemStack(Material.AIR));
+                                event.getPlayer().getInventory().setItemInMainHand(new ItemStack(Material.AIR));
                             }
                             event.getPlayer().updateInventory();
                         }
