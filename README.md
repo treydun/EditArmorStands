@@ -1,5 +1,6 @@
 # EditArmorStands
 Bukkit plugin to edit all the awesome features of ArmorStands
 
-Dev Builds:  
-http://ci.minebench.de/job/EditArmorStands/
+https://www.spigotmc.org/resources/edit-armor-stands.5445/
+#Dev Builds:  
+#http://ci.minebench.de/job/EditArmorStands/
